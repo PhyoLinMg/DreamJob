@@ -23,3 +23,8 @@ Route::get('/admin','AdminController@admin');
 
 Route::get('/admin/register','AdminController@adminregister')->name('adminregister');
 Route::post('/admin/store','AdminController@adminstore')->name('adminstore');
+
+
+Route::get('/chat', 'ChatsController@index');
+Route::get('/messages', 'ChatsController@fetchMessages');
+Route::post('/messages', 'ChatsController@sendMessage');
