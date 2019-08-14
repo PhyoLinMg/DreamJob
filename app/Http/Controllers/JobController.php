@@ -15,6 +15,8 @@ class JobController extends Controller
     public function index()
     {
         //
+        $jobs=Job::get();
+        return view('user.job.index',compact('jobs'));
     }
 
     /**
@@ -24,7 +26,7 @@ class JobController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.panel.job.create');
     }
 
     /**
@@ -36,6 +38,11 @@ class JobController extends Controller
     public function store(Request $request)
     {
         //
+        Job::create([
+            'post'=>$request->post,
+            'salary'=>$request->salary
+        ]);
+        
     }
 
     /**
@@ -82,4 +89,14 @@ class JobController extends Controller
     {
         //
     }
+
+    public function save(Request $request){
+
+    }
+    public function get($id){
+        // dd($id);
+        $job_id=$id;
+        return view('user.jobseeker.index',compact('job_id'));
+        
+    }   
 }

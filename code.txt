@@ -1,0 +1,6 @@
+Job and Job Seeker
+
+U first show the list of the jobs
+and when the user clicks on the job
+we take this job id and show the job seeker cv application form
+and we save this

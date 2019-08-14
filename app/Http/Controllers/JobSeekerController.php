@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\JobSeeker;
+use App\Job;
 use Illuminate\Http\Request;
 
 class JobSeekerController extends Controller
@@ -14,7 +15,7 @@ class JobSeekerController extends Controller
      */
     public function index()
     {
-        //
+        return view('user.jobseeker.index');
     }
 
     /**
@@ -82,4 +83,8 @@ class JobSeekerController extends Controller
     {
         //
     }
+    public function save(Request $request){
+        dd($request);
+    }
+    
 }

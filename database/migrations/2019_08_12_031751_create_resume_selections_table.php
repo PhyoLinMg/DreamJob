@@ -15,7 +15,7 @@ class CreateResumeSelectionsTable extends Migration
     {
         Schema::create('resume_selections', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->int('job_id');
+            $table->integer('job_id');
             $table->string('company_name');
             $table->string('job_title');
             $table->string('job_category');

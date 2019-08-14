@@ -15,7 +15,7 @@ class CreateJobSeekersTable extends Migration
     {
         Schema::create('job_seekers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->int('job_id');
+            $table->integer('job_id');
             $table->string('name');
             $table->string('address');
             $table->string('email');
