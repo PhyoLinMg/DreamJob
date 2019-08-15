@@ -29,13 +29,13 @@ Route::get('/chat', 'ChatsController@index');
 Route::get('/messages', 'ChatsController@fetchMessages');
 Route::post('/messages', 'ChatsController@sendMessage');
 
-Route::get('/job/{id}','JobController@get')->name('get');
+Route::post('/jobseeker/save','JobSeekerController@save')->name('save');
+Route::get('/job/seek/{id}','JobController@get')->name('get');
+
 
 Route::resource('/job','JobController');
 Route::resource('/jobseeker','JobSeekerController');
 Route::resource('/company','CompanyController');
-
-Route::post('/jobseeker/save','JobSeekerController@save')->name('save');
 
 
 
