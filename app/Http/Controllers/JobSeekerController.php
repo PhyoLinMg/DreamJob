@@ -84,7 +84,21 @@ class JobSeekerController extends Controller
         //
     }
     public function save(Request $request){
-        //dd($request);
+        $address=$request->address['addr_line1'].",".$request->address['city'].",".$request->address['state'];
+        $name=$request->firstname." ".$request->lastname;
+        $gender=$request->gender;
+        $phone=$request->q7_phoneNumber['area'].$request->q7_phoneNumber['phone'];
+        $email=$request->email;
+        $job_id=$request->job_id;
+        JobSeeker::create([
+            'job_id'=>$job_id,
+            'name'=>$name,
+            'address'=>$address,
+            'email'=>$email,
+            'phone_no'=>$phone,
+            'gender'=>$gender
+        ]);
+        return redirect("/job");
     }
     
 }
