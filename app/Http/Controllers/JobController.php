@@ -12,6 +12,9 @@ class JobController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(){
+
+    }
     public function index()
     {
         //
@@ -42,7 +45,7 @@ class JobController extends Controller
             'post'=>$request->post,
             'salary'=>$request->salary
         ]);
-        
+        return redirect('/job');
     }
 
     /**
@@ -97,6 +100,5 @@ class JobController extends Controller
         // dd($id);
         $job_id=$id;
         return view('user.jobseeker.index',compact('job_id'));
-        
     }   
 }

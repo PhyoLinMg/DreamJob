@@ -21,12 +21,11 @@ class AdminController extends Controller
 
 
 	public function adminstore(Request $request){
-		
 		$user=User::create([
 			'name'=>$request->name,
 			'email'=>$request->email,
 			'password'=>bcrypt($request->password),
-			'role'=>'admin'
+			'role'=>$request->role
 		]);
 		$user->save();
 	}

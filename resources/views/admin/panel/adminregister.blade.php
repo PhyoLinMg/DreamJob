@@ -75,7 +75,15 @@
 						<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required="true" />
 					</div>
 				</div>
-
+				<div class="form-group row">
+					<label for="password-confirm" class="col-md-4 col-form-label text-md-right white">Role</label>
+					<div class="col-md-6">
+						<select name="role" id="" style="width:200px;">
+							<option value="company">Company</option>
+							<option value="admin">Admin</option>
+						</select>
+					</div>
+				</div>
 				<div class="form-group row mb-0">
 					<div class="col-md-6 offset-md-4">
 						<button type="submit" class="btn btn-primary">

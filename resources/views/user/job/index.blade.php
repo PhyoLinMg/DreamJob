@@ -7,20 +7,19 @@
 		<div class="col-md-8 col-md-offset-2">
 
 			@foreach ($jobs as $job)
-			<div class="card card-hover h-100">
+			<div class="card card-hover">
 				<div class="card-body">
-					<i class="fa fa-search fa-5x float-right"></i>
-					<h3 class="card-title">{{$job->post}}</h3>
-					<p class="card-text">Ur job</p>
-					<div class="reveal">
+					<div style="float: left;">
+						<i class="fa fa-search fa-5x float-right"></i>
+						<h3 class="card-title">{{$job->post}}</h3>
+						<p class="card-text">Ur job</p>
+					</div>
+					<div class="reveal" style="float:left;  margin-left: 100px">
 						<a href="{{ route('get',['id'=>$job->id]) }}" class="btn btn-success">Apply Job</a>
 					</div>
 				</div>
 			</div>
 			@endforeach
-			
-			
-
 		</div>
 	</div>
 	</div
