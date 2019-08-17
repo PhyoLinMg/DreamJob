@@ -55,12 +55,25 @@
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
         background-color: #555;
     }
+    .card-hover .reveal {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        padding: 0;
+    }
+
+    .card-hover:hover .reveal {
+        height: auto;
+        visibility: visible;
+        opacity: 10;
+        transition: opacity 1s ease;
+    }
 </style>
 <script>
-        window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-            'pusherKey' => config('broadcasting.connections.pusher.key'),
-            'pusherCluster' => config('broadcasting.connections.pusher.options.cluster')
+    window.Laravel = {!! json_encode([
+        'csrfToken' => csrf_token(),
+        'pusherKey' => config('broadcasting.connections.pusher.key'),
+        'pusherCluster' => config('broadcasting.connections.pusher.options.cluster')
         ]) !!};
     </script>
 </head>
