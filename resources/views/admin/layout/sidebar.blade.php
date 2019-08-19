@@ -22,8 +22,8 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Subjects</span>
+          <i class="fas fa-fw fa-chat"></i>
+          <span>Chat</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <a class="dropdown-item" href="">Show</a>
@@ -71,8 +71,8 @@
           <span>Admin Register</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
+        <a class="nav-link" href="{{ route('chat') }}">
+          <i class="fas fa-fw fa-comment"></i>
+          <span>Chat</span></a>
       </li>
     </ul>

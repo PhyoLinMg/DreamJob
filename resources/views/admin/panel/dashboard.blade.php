@@ -17,7 +17,7 @@
 				<a href="/admin">Dashboard</a>
 			</li>
 		</ol>
-		<table class="table table-primary">
+		<table class="table table-dark">
 			<thead>
 				<tr>
 					<td>Job</td>
