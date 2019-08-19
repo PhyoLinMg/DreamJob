@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\JobSeeker;
 use App\Job;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class JobSeekerController extends Controller
 {
@@ -84,13 +85,14 @@ class JobSeekerController extends Controller
         //
     }
     public function save(Request $request){
+
         $address=$request->address['addr_line1'].",".$request->address['city'].",".$request->address['state'];
         $name=$request->firstname." ".$request->lastname;
         $gender=$request->gender;
         $phone=$request->q7_phoneNumber['area'].$request->q7_phoneNumber['phone'];
         $email=$request->email;
         $job_id=$request->job_id;
-        JobSeeker::create([
+        $jobseeker=JobSeeker::create([
             'job_id'=>$job_id,
             'name'=>$name,
             'address'=>$address,
@@ -98,7 +100,15 @@ class JobSeekerController extends Controller
             'phone_no'=>$phone,
             'gender'=>$gender
         ]);
+        //save pdf file
+        $file = $request->file('fileupload');
+        $jobseeker->addMedia($file)->toMediaCollection();
         return redirect("/job");
+    }
+    public function download($id){
+        $jobseeker=JobSeeker::findOrFail($id);
+        $media=$jobseeker->getMedia();
+        return response()->download($media[0]->getPath(), $media[0]->file_name);
     }
     
 }

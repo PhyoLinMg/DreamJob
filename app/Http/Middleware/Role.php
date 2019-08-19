@@ -16,7 +16,7 @@ class Role
     public function handle($request, Closure $next,$role)
     {
          if (\Auth::check()) {
-            if (\Auth::user()->admin_id==null) {
+            if (\Auth::user()->role==null) {
                    abort('403');
                    //forbidden to access admin link
             }

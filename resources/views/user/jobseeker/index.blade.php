@@ -498,7 +498,7 @@
     </span>
 </label>
 <div id="cid_15" class="form-input-wide jf-required">
-  <input type="file" id="input_15" name="q15_uploadYour" class="form-upload validate[required]" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-file-maxsize="10240" data-file-minsize="0" data-file-limit="0" data-component="fileupload" required="" />
+  <input type="file" id="input_15" name="fileupload" class="form-upload validate[required]" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-file-maxsize="10240" data-file-minsize="0" data-file-limit="0" data-component="fileupload" required="" />
 </div>
 </li>
 <li class="form-line" data-type="control_button" id="id_17">
@@ -522,15 +522,7 @@
 
 <div class="formFooter-heightMask">
 </div>
-<div class="formFooter f6">
-    <a href="https://www.jotform.com/pricing?utm_source=formfooter&utm_medium=banner&utm_term=92273777311460&utm_content=jotform_logo&utm_campaign=powered_by_jotform_le" target="_blank" class="formFooter-logoLink"><img class="formFooter-logo" src="https://cdn.jotfor.ms/assets/img/logo/logo-new@1x.png" alt="" style="height: 44px;"></a>
-    <div class="formFooter-rightSide">
-      <span class="formFooter-text">
-        Now create your own JotForm - It's free!
-    </span>
-    <a class="formFooter-button" href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=92273777311460&utm_content=jotform_button&utm_campaign=powered_by_jotform_le" target="_blank">Create your own JotForm</a>
-</div>
-</div>
+
 </form>
             {{-- <form action="{{ route('save') }}" method="post">
             	@csrf

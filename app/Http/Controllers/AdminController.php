@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\JobSeeker;
 
 class AdminController extends Controller
 {
-    //
-   //  public function __construct(){
-   //     $this->middleware(['auth','role:admin']); 
-   // }
+	public function __construct(){
+		$this->middleware(['auth','role:admin|company']); 
+	}
 	public function admin(){
-		return view('admin.panel.dashboard');
+		$jobseekers=JobSeeker::get();
+		return view('admin.panel.dashboard',compact('jobseekers'));
 	}
 
 	public function adminregister(){
@@ -29,5 +30,5 @@ class AdminController extends Controller
 		]);
 		$user->save();
 	}
-    
+
 }

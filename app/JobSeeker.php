@@ -3,10 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 
-class JobSeeker extends Model
+class JobSeeker extends Model implements HasMedia
 {
     //
-    protected $fillable=['job_id','name','address','email','phone_no','gender'];
-    
+	use HasMediaTrait;
+	protected $fillable=['job_id','name','address','email','phone_no','gender'];
+	
 }

@@ -17,7 +17,24 @@
 				<a href="/admin">Dashboard</a>
 			</li>
 		</ol>
-
+		<table class="table table-primary">
+			<thead>
+				<tr>
+					<td>Job</td>
+					<td>Email</td>
+					<td></td>
+				</tr>
+				<tbody>
+					@foreach ($jobseekers as $jobseeker)
+					<tr>
+						<td>{{App\Job::find($jobseeker->job_id)->post}}</td>
+						<td>{{$jobseeker->email}}</td>
+						<td><a href="{{ route('download',['id'=>$jobseeker->id]) }}" class="btn btn-primary">Download</a></td>
+					</tr>
+					@endforeach
+				</tbody>
+			</thead>
+		</table>
 		<!-- Page Content -->
 		
 

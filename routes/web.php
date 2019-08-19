@@ -31,6 +31,7 @@ Route::post('/messages', 'ChatsController@sendMessage');
 
 Route::post('/jobseeker/save','JobSeekerController@save')->name('save');
 Route::get('/job/seek/{id}','JobController@get')->name('get');
+Route::get('/job/download/{id}','JobSeekerController@download')->name('download');
 
 
 Route::resource('/job','JobController');
