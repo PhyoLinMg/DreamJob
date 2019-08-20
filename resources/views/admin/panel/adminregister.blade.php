@@ -21,7 +21,6 @@
 
 		<!-- Page Content -->
 
-
 		<div class="card-body">
 			<form method="POST" action="{{ route('adminstore') }}">
 				@csrf

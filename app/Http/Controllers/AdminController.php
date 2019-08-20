@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Job;
 use App\JobSeeker;
 
 class AdminController extends Controller
@@ -13,13 +14,13 @@ class AdminController extends Controller
 	}
 	public function admin(){
 		$jobseekers=JobSeeker::get();
-		return view('admin.panel.dashboard',compact('jobseekers'));
+		$jobs=Job::where('status','deny')->get();
+		return view('admin.panel.dashboard',compact('jobseekers','jobs'));
 	}
 
 	public function adminregister(){
 		return view('admin.panel.adminregister');
 	}
-
 
 	public function adminstore(Request $request){
 		$user=User::create([
@@ -29,6 +30,13 @@ class AdminController extends Controller
 			'role'=>$request->role
 		]);
 		$user->save();
+	}
+	public function statusUpdate($id){
+		$job=Job::findOrFail($id);
+		if($job->status=="deny"){
+			$job->status="accept";
+			$job->save();
+		}
 	}
 
 }

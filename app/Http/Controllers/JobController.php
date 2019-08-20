@@ -92,7 +92,9 @@ class JobController extends Controller
     {
         //
     }
-
+    public function adminindex(){
+        return view('admin.panel.job.index');
+    }
     public function save(Request $request){
 
     }

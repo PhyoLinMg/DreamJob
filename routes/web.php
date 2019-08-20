@@ -30,8 +30,11 @@ Route::get('/messages', 'ChatsController@fetchMessages');
 Route::post('/messages', 'ChatsController@sendMessage');
 
 Route::post('/jobseeker/save','JobSeekerController@save')->name('save');
+Route::get('/admin/job','JobController@adminindex')->name('jobadmin');
+
 Route::get('/job/seek/{id}','JobController@get')->name('get');
 Route::get('/job/download/{id}','JobSeekerController@download')->name('download');
+Route::get('/job/update/{id}','AdminController@statusUpdate')->name('update');
 
 Route::resource('/job','JobController');
 Route::resource('/jobseeker','JobSeekerController');
