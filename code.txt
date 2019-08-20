@@ -4,3 +4,9 @@ U first show the list of the jobs
 and when the user clicks on the job
 we take this job id and show the job seeker cv application form
 and we save this
+
+
+what i left is to create company crud
+and i have to write user panel and homepage(it is quite troublesome)
+
+and i have to finish the admin panel tmr.
