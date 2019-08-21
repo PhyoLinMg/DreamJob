@@ -26,8 +26,8 @@
           <span>Company</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href="">Show</a>
-          <a class="dropdown-item" href="">Create</a>
+          <a class="dropdown-item" href="{{ route('companyadmin') }}">Show</a>
+          <a class="dropdown-item" href="{{ route('company.create') }}">Create</a>
           
           {{-- <div class="dropdown-divider"></div>
           <h6 class="dropdown-header">Other Pages:</h6>

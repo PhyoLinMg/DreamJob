@@ -1,5 +1,7 @@
 <?php
 
+use App\Job;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +14,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$jobs=Job::get();
+    return view('welcome',compact('jobs'));
 });
 
 Auth::routes();
@@ -31,7 +34,7 @@ Route::post('/messages', 'ChatsController@sendMessage');
 
 Route::post('/jobseeker/save','JobSeekerController@save')->name('save');
 Route::get('/admin/job','JobController@adminindex')->name('jobadmin');
-
+Route::get('/admin/company','CompanyController@adminindex')->name('companyadmin');
 Route::get('/job/seek/{id}','JobController@get')->name('get');
 Route::get('/job/download/{id}','JobSeekerController@download')->name('download');
 Route::get('/job/update/{id}','AdminController@statusUpdate')->name('update');

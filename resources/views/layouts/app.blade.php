@@ -91,7 +91,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="{{ route('job.index') }}">Jobs</a>
+                        <a class="nav-item nav-link" href="#"></a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -99,11 +101,11 @@
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="btn btn-outline-success" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="btn btn-outline-success" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                         @endif
                         @else

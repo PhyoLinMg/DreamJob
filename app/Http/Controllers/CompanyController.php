@@ -24,7 +24,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.panel.company.create');
     }
 
     /**
@@ -36,6 +36,13 @@ class CompanyController extends Controller
     public function store(Request $request)
     {
         //
+        Company::create([
+            'name'=>$request->name,
+            'address'=>$request->address,
+            'description'=>$request->description,
+            'number_of_jobs'=>$request->no_of_jobs
+        ]);
+        return redirect('/admin/company');
     }
 
     /**
@@ -57,7 +64,8 @@ class CompanyController extends Controller
      */
     public function edit(Company $company)
     {
-        //
+        $jj=$company;
+        return view('admin.panel.company.edit',compact('jj'));
     }
 
     /**
@@ -70,6 +78,12 @@ class CompanyController extends Controller
     public function update(Request $request, Company $company)
     {
         //
+        $company->name=$request->name;
+        $company->address=$request->address;
+        $company->description=$request->description;
+        $company->number_of_jobs=$request->no_of_jobs;
+        $company->save();
+        return redirect('/admin/company');
     }
 
     /**
@@ -81,5 +95,11 @@ class CompanyController extends Controller
     public function destroy(Company $company)
     {
         //
+        $company->delete();
+        return redirect('/admin/company');
+    }
+    public function adminindex(){
+        $companies=Company::get();
+        return view('admin.panel.company.index',compact('companies'));
     }
 }

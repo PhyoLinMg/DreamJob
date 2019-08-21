@@ -13,7 +13,7 @@ class JobController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function __construct(){
-
+        $this->middleware(['auth','role:admin|company|user']);
     }
     public function index()
     {
@@ -68,6 +68,8 @@ class JobController extends Controller
     public function edit(Job $job)
     {
         //
+        $jj=$job;
+        return view('admin.panel.job.edit',compact('jj'));
     }
 
     /**
@@ -80,6 +82,10 @@ class JobController extends Controller
     public function update(Request $request, Job $job)
     {
         //
+        $job->post=$request->post;
+        $job->salary=$request->salary;
+        $job->save();
+        return redirect('/admin/job');
     }
 
     /**
@@ -90,10 +96,12 @@ class JobController extends Controller
      */
     public function destroy(Job $job)
     {
-        //
+        $job->delete();
+        return redirect('/admin/job');
     }
     public function adminindex(){
-        return view('admin.panel.job.index');
+        $jobs=Job::get();
+        return view('admin.panel.job.index',compact('jobs'));
     }
     public function save(Request $request){
 

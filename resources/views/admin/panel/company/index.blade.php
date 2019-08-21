@@ -16,7 +16,7 @@
 				<a href="/admin">Dashboard</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="/admin/job">Job</a>
+				<a href="/company">company</a>
 			</li>
 			<li class="breadcrumb-item active">Index</li>
 		</ol>
@@ -24,8 +24,9 @@
 		<table class="table table-dark">
 			<thead>
 				<tr>
-					<td>Post</td>
-					<td>Salary</td>
+					<td>Name</td>
+					<td>Address</td>
+					<td>Number of Jobs</td>
 					<td></td>
 					<td></td>
 				</tr>
@@ -33,17 +34,17 @@
 		
 		
 		<tbody>
-			@foreach($jobs as $job)
+			@foreach($companies as $company)
 			<tr>
-				<td>{{$job->post}}</td>
-				<td>{{$job->salary}}</td>
-				<td><a href="{{ route('job.edit',['id'=>$job->id]) }}" class="btn btn-primary">Edit</a></td>
+				<td>{{$company->name}}</td>
+				<td>{{$company->address}}</td>
+				<td><a href="{{ route('company.edit',['id'=>$company->id]) }}" class="btn btn-primary">Edit</a></td>
 				<td>
-					<form id = "deleteform{{$job->id}}" action="{{route('job.destroy',$job->id)}}" method="post">
+					<form id = "deleteform{{$company->id}}" action="{{route('company.destroy',$company->id)}}" method="post">
 						@csrf
 						<input type="hidden" name="_method" value="delete">
 					</form>
-					<button onclick="confirm({{$job->id}})" class="btn btn-danger">Delete</button>
+					<button onclick="confirm({{$company->id}})" class="btn btn-danger">Delete</button>
 				</td>
 			</tr>
 			@endforeach

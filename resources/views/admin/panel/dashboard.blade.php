@@ -8,7 +8,6 @@
 
 @section('content')
 <div id="content-wrapper" class="black">
-
 	<div class="container-fluid">
 
 		<!-- Breadcrumbs-->
