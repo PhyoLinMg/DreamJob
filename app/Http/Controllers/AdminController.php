@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Job;
 use App\JobSeeker;
+use App\Company;
 
 class AdminController extends Controller
 {
@@ -19,7 +20,8 @@ class AdminController extends Controller
 	}
 
 	public function adminregister(){
-		return view('admin.panel.adminregister');
+		$companies=Company::get();
+		return view('admin.panel.adminregister',compact('companies'));
 	}
 
 	public function adminstore(Request $request){

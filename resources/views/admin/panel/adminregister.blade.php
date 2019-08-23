@@ -74,15 +74,27 @@
 						<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required="true" />
 					</div>
 				</div>
+				
 				<div class="form-group row">
 					<label for="password-confirm" class="col-md-4 col-form-label text-md-right white">Role</label>
 					<div class="col-md-6">
-						<select name="role" id="" style="width:200px;">
+						<select name="role" id="seeAnotherField" class="form-control">
 							<option value="company">Company</option>
 							<option value="admin">Admin</option>
 						</select>
 					</div>
 				</div>
+				<div class="form-group row" id="otherFieldDiv">
+					<label for="otherField" class="col-md-4 col-form-label text-md-right white">Choose Your Company</label>
+					<div class="col-md-6">
+						<select class="form-control" id="otherField">
+							@foreach($companies as $company)
+							<option value="{{$company->id}}">{{$company->name}}</option>
+							@endforeach
+						</select>
+					</div>
+				</div>
+
 				<div class="form-group row mb-0">
 					<div class="col-md-6 offset-md-4">
 						<button type="submit" class="btn btn-primary">
@@ -95,4 +107,19 @@
 		
 
 	</div>
+
+	<script>
+		$("#seeAnotherField").change(function() {
+			if ($(this).val() == "company") {
+				$('#otherFieldDiv').show();
+				$('#otherField').attr('required', '');
+				$('#otherField').attr('data-error', 'This field is required.');
+			} else {
+				$('#otherFieldDiv').hide();
+				$('#otherField').removeAttr('required');
+				$('#otherField').removeAttr('data-error');
+			}
+		});
+		$("#seeAnotherField").trigger("change");
+	</script>
 	@endsection

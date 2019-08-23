@@ -102,4 +102,8 @@ class CompanyController extends Controller
         $companies=Company::get();
         return view('admin.panel.company.index',compact('companies'));
     }
+    public function userindex(){
+        $companies=Company::get();
+        return view('user.company.index',compact('companies'));
+    }
 }

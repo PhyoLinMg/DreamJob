@@ -36,7 +36,7 @@ Route::post('/jobseeker/save','JobSeekerController@save')->name('save');
 Route::get('/admin/job','JobController@adminindex')->name('jobadmin');
 Route::get('/admin/company','CompanyController@adminindex')->name('companyadmin');
 Route::get('/admin/jobseeker','JobSeekerController@adminindex')->name('jobseekeradmin');
-
+Route::get('/user/company','CompanyController@userindex')->name('userindex');
 
 Route::get('/job/seek/{id}','JobController@get')->name('get');
 Route::get('/job/download/{id}','JobSeekerController@download')->name('download');
