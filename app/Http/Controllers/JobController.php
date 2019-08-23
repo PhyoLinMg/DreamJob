@@ -18,7 +18,7 @@ class JobController extends Controller
     public function index()
     {
         //
-        $jobs=Job::get();
+        $jobs=Job::where('status','accept')->get();
         return view('user.job.index',compact('jobs'));
     }
 
@@ -45,7 +45,7 @@ class JobController extends Controller
             'post'=>$request->post,
             'salary'=>$request->salary
         ]);
-        return redirect('/job');
+        return redirect('/admin/job');
     }
 
     /**
@@ -100,15 +100,21 @@ class JobController extends Controller
         return redirect('/admin/job');
     }
     public function adminindex(){
-        $jobs=Job::get();
+        $jobs=Job::where('status','accept')->get();
         return view('admin.panel.job.index',compact('jobs'));
     }
-    public function save(Request $request){
-
+    public function statusUpdate($id){
+        $job=Job::findOrFail($id);
+        if($job->status=="deny"){
+            $job->status="accept";
+            $job->save();
+        }
+        return redirect('/admin');
     }
     public function get($id){
         // dd($id);
         $job_id=$id;
         return view('user.jobseeker.index',compact('job_id'));
-    }   
+    }
+
 }

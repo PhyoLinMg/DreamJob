@@ -35,9 +35,14 @@ Route::post('/messages', 'ChatsController@sendMessage');
 Route::post('/jobseeker/save','JobSeekerController@save')->name('save');
 Route::get('/admin/job','JobController@adminindex')->name('jobadmin');
 Route::get('/admin/company','CompanyController@adminindex')->name('companyadmin');
+Route::get('/admin/jobseeker','JobSeekerController@adminindex')->name('jobseekeradmin');
+
+
 Route::get('/job/seek/{id}','JobController@get')->name('get');
 Route::get('/job/download/{id}','JobSeekerController@download')->name('download');
-Route::get('/job/update/{id}','AdminController@statusUpdate')->name('update');
+Route::get('/jobseeker/update/{id}','JobSeekerController@updateStatus')->name('updateStatus');
+Route::get('/jobseeker/remove/{id}','JobSeekerController@remove')->name('remove');
+Route::get('/job/update/{id}','JobController@statusUpdate')->name('update');
 
 Route::resource('/job','JobController');
 Route::resource('/jobseeker','JobSeekerController');

@@ -124,7 +124,12 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
+                            @if(Auth::user()->role=="admin" ||Auth::user()->role=="company")
+                            <a href="/admin" class="dropdown-item">Admin</a>
+                            @endif
+                            
                         </div>
+                        
                     </li>
                     @endguest
                 </ul>

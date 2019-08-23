@@ -110,5 +110,22 @@ class JobSeekerController extends Controller
         $media=$jobseeker->getMedia();
         return response()->download($media[0]->getPath(), $media[0]->file_name);
     }
-    
+    public function adminindex(){
+        $jobseekers=JobSeeker::get();
+        return view('admin.panel.jobseeker.index',compact('jobseekers'));
+    }
+    public function updateStatus($id){
+        $jobseeker=JobSeeker::findOrFail($id);
+        if($jobseeker->status=="unhired"){
+            $jobseeker->status='hired';
+            $jobseeker->save();
+        }
+        return redirect('/admin/jobseeker');
+    }
+    public function remove($id){
+        $jobseeker=JobSeeker::findOrFail($id);
+        $jobseeker->status='removed';
+        $jobseeker->save();
+        return redirect('/admin/jobseeker');
+    }
 }

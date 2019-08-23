@@ -10,3 +10,4 @@ what i left is to create company crud
 and i have to write user panel and homepage(it is quite troublesome)
 
 and i have to finish the admin panel tmr.
+

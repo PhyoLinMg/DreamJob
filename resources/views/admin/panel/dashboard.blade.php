@@ -35,25 +35,53 @@
 			</thead>
 			@endif
 			<tbody>
-				@if (\Auth::user()->role=="admin")
+				@if (\Auth::user()->role=="company")
 				@foreach ($jobseekers as $jobseeker)
 				<tr>
-					<td>{{App\Job::find($jobseeker->job_id)->post}}</td>
+					<td>{{App\Job::find($jobseeker->job_id)['post']}}</td>
 					<td>{{$jobseeker->email}}</td>
 					<td><a href="{{ route('download',['id'=>$jobseeker->id]) }}" class="btn btn-primary">Download</a></td>
 				</tr>
 				@endforeach
-				@elseif(\Auth::user()->role=="company")
+				@elseif(\Auth::user()->role=="admin")
 				@foreach ($jobs as $job)
 				<tr>
 					<td>{{$job->post}}</td>
 					<td><a href="{{ route('update',['id'=>$job->id]) }}" class="btn btn-success">Approve</a></td>
-					<td><a href="{{ route('update',['id'=>$job->id]) }}" class="btn btn-danger">Delete</a></td>
+					<td>
+						<form id = "deleteform{{$job->id}}" action="{{route('job.destroy',$job->id)}}" method="post">
+							@csrf
+							<input type="hidden" name="_method" value="delete">
+						</form>
+						<button onclick="confirm({{$job->id}})" class="btn btn-danger">Delete</button>
+					</td>
 				</tr>
 				@endforeach
 				@endif
 			</tbody>
 		</table>
 		<!-- Page Content -->
+		<script>
+		function confirm($id){
+			const swal=window.swal;
+
+			swal({
+				title: "Are you sure?",
+				text: "",
+				icon: "warning",
+				buttons: true,
+				dangerMode: true,
+			})
+			.then((willDelete) => {
+				if (willDelete) {
+					document.getElementById("deleteform"+$id).submit();
+
+				} else {
+					swal("Not Deleted");
+
+				}
+			});
+		}
+	</script>
 	</div>
 	@endsection

@@ -31,12 +31,5 @@ class AdminController extends Controller
 		]);
 		$user->save();
 	}
-	public function statusUpdate($id){
-		$job=Job::findOrFail($id);
-		if($job->status=="deny"){
-			$job->status="accept";
-			$job->save();
-		}
-	}
 
 }

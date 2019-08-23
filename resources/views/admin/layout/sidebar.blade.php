@@ -7,7 +7,7 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
+          <i class="fas fa-fw fa-tasks"></i>
           <span>Jobs</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
@@ -22,7 +22,7 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
+          <i class="fas fa-fw fa-building"></i>
           <span>Company</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
@@ -37,13 +37,11 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Periods</span>
+          <i class="fas fa-fw fa-user-md"></i>
+          <span>Applications</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href="">Show</a>
-          <a class="dropdown-item" href="">Create</a>
-          
+          <a class="dropdown-item" href="{{ route('jobseekeradmin') }}">Show</a>  
           {{-- <div class="dropdown-divider"></div>
           <h6 class="dropdown-header">Other Pages:</h6>
           <a class="dropdown-item" href="404.html">404 Page</a>
