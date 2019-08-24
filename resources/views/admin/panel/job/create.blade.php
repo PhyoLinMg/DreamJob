@@ -41,12 +41,5 @@
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</div>
 		</form>
-		{{-- <form action="{{ route('job.store') }}" method="post">
-			@csrf
-			<input type="text" name="post">
-			<input type="text" name="salary">
-			<input type="submit">
-		</form> --}}
-
 	</div>
 	@endsection

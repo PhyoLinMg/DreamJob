@@ -43,7 +43,8 @@ class JobController extends Controller
         //
         Job::create([
             'post'=>$request->post,
-            'salary'=>$request->salary
+            'salary'=>$request->salary,
+            'company_id'=>\Auth::user()->company_id
         ]);
         return redirect('/admin/job');
     }

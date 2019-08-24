@@ -29,9 +29,11 @@ class AdminController extends Controller
 			'name'=>$request->name,
 			'email'=>$request->email,
 			'password'=>bcrypt($request->password),
-			'role'=>$request->role
+			'role'=>$request->role,
+			'company_id'=>$request->company
 		]);
 		$user->save();
+		return redirect('/admin');
 	}
 
 }

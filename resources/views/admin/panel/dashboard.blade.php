@@ -17,7 +17,7 @@
 			</li>
 		</ol>
 		<table class="table table-dark">
-			@if (\Auth::user()->role=="admin")
+			@if (\Auth::user()->role=="company")
 			<thead>
 				<tr>
 					<td>Job</td>
@@ -25,7 +25,7 @@
 					<td></td>
 				</tr>
 			</thead>
-			@elseif(\Auth::user()->role=="company")
+			@elseif(\Auth::user()->role=="admin")
 			<thead>
 				<tr>
 					<td>Job Name</td>

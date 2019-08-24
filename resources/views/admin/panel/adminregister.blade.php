@@ -85,9 +85,9 @@
 					</div>
 				</div>
 				<div class="form-group row" id="otherFieldDiv">
-					<label for="otherField" class="col-md-4 col-form-label text-md-right white">Choose Your Company</label>
+					<label for="company" class="col-md-4 col-form-label text-md-right white">Choose Your Company</label>
 					<div class="col-md-6">
-						<select class="form-control" id="otherField">
+						<select class="form-control" name="company" id="company">
 							@foreach($companies as $company)
 							<option value="{{$company->id}}">{{$company->name}}</option>
 							@endforeach
@@ -112,12 +112,12 @@
 		$("#seeAnotherField").change(function() {
 			if ($(this).val() == "company") {
 				$('#otherFieldDiv').show();
-				$('#otherField').attr('required', '');
-				$('#otherField').attr('data-error', 'This field is required.');
+				$('#company').attr('required', '');
+				$('#company').attr('data-error', 'This field is required.');
 			} else {
 				$('#otherFieldDiv').hide();
-				$('#otherField').removeAttr('required');
-				$('#otherField').removeAttr('data-error');
+				$('#company').removeAttr('required');
+				$('#company').removeAttr('data-error');
 			}
 		});
 		$("#seeAnotherField").trigger("change");

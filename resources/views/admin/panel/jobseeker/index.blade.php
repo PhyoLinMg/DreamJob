@@ -35,7 +35,9 @@
 					<td>{{$jobseeker->address}}</td>
 					<td>{{$jobseeker->email}}</td>
 					<td><a href="{{ route('download',['id'=>$jobseeker->id]) }}" class="btn btn-primary">Download</a></td>
+					@if(\Auth::user()->role=="company")
 					<td><a href="{{ route('updateStatus',['id'=>$jobseeker->id]) }}" class="btn btn-success">Hire</a></td>
+					@endif
 					<td><a href="{{ route('remove',['id'=>$jobseeker->id]) }}" class="btn btn-danger">Remove</a></td>
 				</tr>
 				@endforeach
