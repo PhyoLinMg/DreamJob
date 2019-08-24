@@ -13,13 +13,13 @@
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <a class="dropdown-item" href="{{ route('jobadmin') }}">Show</a>
           <a class="dropdown-item" href="{{ route('job.create') }}">Create</a>
-          
           {{-- <div class="dropdown-divider"></div>
           <h6 class="dropdown-header">Other Pages:</h6>
           <a class="dropdown-item" href="404.html">404 Page</a>
           <a class="dropdown-item active" href="blank.html">Blank Page</a> --}}
         </div>
       </li>
+      @if(\Auth::user()->role=="admin")
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-building"></i>
@@ -35,6 +35,7 @@
           <a class="dropdown-item active" href="blank.html">Blank Page</a> --}}
         </div>
       </li>
+      @endif
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-user-md"></i>

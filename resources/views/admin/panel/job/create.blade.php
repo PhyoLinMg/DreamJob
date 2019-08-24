@@ -23,12 +23,30 @@
 		</ol>
 
 		<!-- Page Content -->
+
 		<form action="{{ route('job.store') }}" method="post">
+			@csrf
+			<div class="form-group">
+				<label for="" class="white">Post</label>
+				<input class="form-control" name="post" id="" type="text" required/>
+				<small id="" class="form-text text-muted">Please enter the post</small>
+			</div>
+			
+			<div class="form-group">
+				<label for="" class="white">Salary</label>
+				<input class="form-control" name="salary" id="" type="text" required/>
+				<small id="" class="form-text text-muted">Please enter the salary</small>
+			</div>
+			<div class="box-footer">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</form>
+		{{-- <form action="{{ route('job.store') }}" method="post">
 			@csrf
 			<input type="text" name="post">
 			<input type="text" name="salary">
 			<input type="submit">
-		</form>
+		</form> --}}
 
 	</div>
 	@endsection
