@@ -5,7 +5,6 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-
 			@foreach ($jobs as $job)
 			<div class="card card-hover">
 				<div class="card-body">
