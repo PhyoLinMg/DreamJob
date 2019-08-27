@@ -93,7 +93,7 @@
                     <ul class="navbar-nav mr-auto">
                         <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link" href="{{ route('job.index') }}">Jobs</a>
-                        <a class="nav-item nav-link" href="#"></a>
+                        <a class="nav-item nav-link" href="{{ route('userindex') }}">Company</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
