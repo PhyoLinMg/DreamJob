@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\JobSeeker;
 use App\Job;
+use Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -111,7 +112,7 @@ class JobSeekerController extends Controller
         return response()->download($media[0]->getPath(), $media[0]->file_name);
     }
     public function adminindex(){
-        $jobseekers=JobSeeker::get();
+        $jobseekers=JobSeeker::where('status','unhired')->get();
         return view('admin.panel.jobseeker.index',compact('jobseekers'));
     }
     public function updateStatus($id){
@@ -119,6 +120,7 @@ class JobSeekerController extends Controller
         if($jobseeker->status=="unhired"){
             $jobseeker->status='hired';
             $jobseeker->save();
+            $this->sendEmail($jobseeker->name,$jobseeker->email,$jobseeker->status);
         }
         return redirect('/admin/jobseeker');
     }
@@ -126,6 +128,29 @@ class JobSeekerController extends Controller
         $jobseeker=JobSeeker::findOrFail($id);
         $jobseeker->status='removed';
         $jobseeker->save();
+
+        $this->sendEmail($jobseeker->name,$jobseeker->email,$jobseeker->status);
         return redirect('/admin/jobseeker');
+    }
+    public function sendEmail($name,$email,$status){
+        $fullName = "DreamJob Agency";
+        $subject = "Replying to the job seeker";
+        $fromEmail = 'gangsterplm@gmail.com';
+
+        $data = array(
+            "from" => $fromEmail,
+            "subject" => $subject,
+            'senderName' => $fullName,
+            "toEmail" => $email,
+            "status"=>$status,
+            'name' => $name
+        );
+
+        Mail::send('email', $data, function ($message) use ($data) {
+            $message->to($data['toEmail'], $data['name'])
+                ->subject($data['subject']);
+            $message->from('gangsterplm@gmail.com', $data['senderName']);
+        });
+
     }
 }
