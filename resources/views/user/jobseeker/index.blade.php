@@ -4,6 +4,39 @@
 
 <div class="container">
   <div class="row">
+    <div class="col-md-4" style="border: 1px solid #FFD98D">
+      <ul class="ul">
+        <li class="ulli">
+          <i class="fas fa-fw fa-tasks" style="margin-right:40px;"></i>{{App\Job::find($job_id)->post}}
+        </li>
+        <li class="ulli">
+          <div class="row">
+            <div class="col-md-2">
+              <i class="fas fa-fw fa-id-card"></i>
+            </div>
+            <div class="col-md-10">
+              Job Description
+
+              -The Process Engineer role is critical to the development of our factories to World Class, which means zero defects, zero waste and zero losses.
+              -She/he will apply extensively the full range of Focused and Quality Improvement methods and tools to counter losses identified in the areas of Safety, Quality, Cost Deployment, Customer Service and Logistics.
+              -The Cost Deployment pillar will be populated with data built up through application of the Managing Manufacturing Performance Code, which is key to ensuring focus on key losses.
+              -Working directly with the line crews on a daily basis the Process Engineer also acts as the technical trainer for line teams and provides coaching in phenomena identification, root cause analysis and the establishment of counter-measures.
+              -The Process Engineer is responsible for the validation of all process improvements and the establishment of revised basic conditions on the line. A core deliverable is eliminated losses and wastes and increase the stability of the line to support the transition of traditional line teams to semi-autonomous teams.
+
+
+
+              Job Requirements
+
+              -Post Graduate level education ore Bachelor Degree with relevant engineering skills in specialized field of Mechanical, Chemical or Electrical.
+              -Have background experiences in FMCG/ Manufacturing field.
+              -Flexible, Dependency and Accuracy.
+              -Good communication skills.
+              -Good command of English. Able to use MS package (especially Word and Excel).
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
     <div class="col-md-8 col-md-offset-2">
       <script src="https://cdn.jotfor.ms/js/vendor/imageinfo.js?v=3.3.12437" type="text/javascript"></script>
       <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
@@ -505,7 +538,7 @@
             <div id="cid_17" class="form-input-wide">
               <div style="margin-left:156px" class="form-buttons-wrapper ">
                 <button id="input_17" type="submit" class="form-submit-button" data-component="button">
-                  Save
+                  Apply Job
                 </button>
               </div>
             </div>

@@ -41,7 +41,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-user-md"></i>
-          <span>Applications</span>
+          <span>Applicants</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <a class="dropdown-item" href="{{ route('jobseekeradmin') }}">Show</a>  
@@ -51,11 +51,13 @@
           <a class="dropdown-item active" href="blank.html">Blank Page</a> --}}
         </div>
       </li> 
+      @if(\Auth::user()->role=="admin")
       <li class="nav-item">
         <a class="nav-link" href="{{ route('adminregister') }}">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Admin Register</span></a>
         </li>
+      @endif
         <li class="nav-item">
           <a class="nav-link" href="{{ route('chat') }}">
             <i class="fas fa-fw fa-comment"></i>

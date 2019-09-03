@@ -80,62 +80,68 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <div class="container">
+            <a class="navbar-brand" href="{{ url('/') }}">
+                {{ config('app.name', 'Laravel') }}
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="{{ route('job.index') }}">Jobs</a>
-                        <a class="nav-item nav-link" href="{{ route('userindex') }}">Companies</a>
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                        <li class="nav-item">
-                            <a class="btn btn-outline-success" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                        @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="btn btn-outline-success" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                        @endif
-                        @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                            @if(Auth::user()->role=="admin" ||Auth::user()->role=="company")
-                            <a href="/admin" class="dropdown-item">Admin</a>
-                            @endif
-                            
-                        </div>
-                        
-                    </li>
-                    @endguest
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="{{ route('job.index') }}">Jobs</a>
+                    <a class="nav-item nav-link" href="{{ route('userindex') }}">Companies</a>
                 </ul>
-            </div>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Authentication Links -->
+                    <form class="form-inline" action="{{ route('search') }}" method="post">
+                        @csrf
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search Job" name="job"
+                        aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    @guest
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                    @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                    @endif
+                    @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                        @if(Auth::user()->role=="admin" ||Auth::user()->role=="company")
+                        <a href="/admin" class="dropdown-item">Admin</a>
+                        @endif
+
+                    </div>
+
+                </li>
+                @endguest
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
@@ -143,15 +149,8 @@
             <div class="row" style="margin-bottom: 20px">
                 @foreach($jobs as $job)
                 <div class="col-md-6">
-                    <div class="card">
-                      <img class="card-img-top" src="{{ asset('image/suzuki.png') }}" style="height: 100px;" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="{{ route('get',['id'=>$job->id]) }}" class="atag">{{$job->post}}</a></br>
-                    </div>
+                    <a href="{{ route('get',['id'=>$job->id]) }}" class="atag">{{$job->post}}</a></br>
                 </div>
-            </div>
             @endforeach
         </div>
         <p>Featured Jobs</p>

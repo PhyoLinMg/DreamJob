@@ -117,5 +117,10 @@ class JobController extends Controller
         $job_id=$id;
         return view('user.jobseeker.index',compact('job_id'));
     }
+    public function search(Request $request){
+        $jobname=$request->job;
+        $job = Job::where('post','LIKE','%'.$jobname.'%')->get();
+        return view('user.job.searched',compact('job'));
 
+    }
 }

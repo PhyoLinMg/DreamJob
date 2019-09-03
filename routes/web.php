@@ -27,12 +27,12 @@ Route::get('/admin','AdminController@admin');
 Route::get('/admin/register','AdminController@adminregister')->name('adminregister');
 Route::post('/admin/store','AdminController@adminstore')->name('adminstore');
 
-
 Route::get('/chat', 'ChatsController@index')->name('chat');
 Route::get('/messages', 'ChatsController@fetchMessages');
 Route::post('/messages', 'ChatsController@sendMessage');
 
 Route::post('/jobseeker/save','JobSeekerController@save')->name('save');
+Route::post('/search','JobController@search')->name('search');
 Route::get('/admin/job','JobController@adminindex')->name('jobadmin');
 Route::get('/admin/company','CompanyController@adminindex')->name('companyadmin');
 Route::get('/admin/jobseeker','JobSeekerController@adminindex')->name('jobseekeradmin');

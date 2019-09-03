@@ -112,7 +112,7 @@ class JobSeekerController extends Controller
         return response()->download($media[0]->getPath(), $media[0]->file_name);
     }
     public function adminindex(){
-        $jobseekers=JobSeeker::where('status','unhired')->get();
+        $jobseekers=JobSeeker::get();
         return view('admin.panel.jobseeker.index',compact('jobseekers'));
     }
     public function updateStatus($id){
@@ -125,12 +125,14 @@ class JobSeekerController extends Controller
         return redirect('/admin/jobseeker');
     }
     public function remove($id){
+
         $jobseeker=JobSeeker::findOrFail($id);
         $jobseeker->status='removed';
         $jobseeker->save();
 
         $this->sendEmail($jobseeker->name,$jobseeker->email,$jobseeker->status);
         return redirect('/admin/jobseeker');
+        
     }
     public function sendEmail($name,$email,$status){
         $fullName = "DreamJob Agency";

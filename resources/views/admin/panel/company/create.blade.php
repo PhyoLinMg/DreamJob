@@ -17,7 +17,7 @@
 				<a href="/admin">Dashboard</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="/job">Job</a>
+				<a href="/company">Company</a>
 			</li>
 			<li class="breadcrumb-item active">Create</li>
 		</ol>
@@ -44,9 +44,9 @@
 			</div>
 
 			<div class="form-group">
-				<label for="" class="white">Number of jobs</label>
-				<input class="form-control" name="no_of_jobs" id="" type="text" required/>
-				<small id="" class="form-text text-muted">Please enter the total number of jobs</small>
+				<label for="" class="white">Email</label>
+				<input class="form-control" name="email" id="" type="text" required/>
+				<small id="" class="form-text text-muted">Please enter the email</small>
 			</div>
 
 			<div class="form-group">

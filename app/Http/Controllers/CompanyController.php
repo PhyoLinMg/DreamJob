@@ -40,7 +40,7 @@ class CompanyController extends Controller
             'name'=>$request->name,
             'address'=>$request->address,
             'description'=>$request->description,
-            'number_of_jobs'=>$request->no_of_jobs
+            'email'=>$request->email
         ]);
         return redirect('/admin/company');
     }

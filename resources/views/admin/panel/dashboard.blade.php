@@ -28,7 +28,8 @@
 			@elseif(\Auth::user()->role=="admin")
 			<thead>
 				<tr>
-					<td>Job Name</td>
+					<td>Job Post</td>
+					<td></td>
 					<td></td>
 					<td></td>
 				</tr>
@@ -38,9 +39,11 @@
 				@if (\Auth::user()->role=="company")
 				@foreach ($jobseekers as $jobseeker)
 				<tr>
+
 					<td>{{App\Job::find($jobseeker->job_id)['post']}}</td>
 					<td>{{$jobseeker->email}}</td>
 					<td><a href="{{ route('download',['id'=>$jobseeker->id]) }}" class="btn btn-primary">Download</a></td>
+					<td>{{$jobseeker->status}}</td>
 				</tr>
 				@endforeach
 				@elseif(\Auth::user()->role=="admin")

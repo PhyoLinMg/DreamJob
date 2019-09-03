@@ -16,7 +16,7 @@
 				<a href="/admin">Dashboard</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="/company">company</a>
+				<a href="/company">Company</a>
 			</li>
 			<li class="breadcrumb-item active">Index</li>
 		</ol>
@@ -26,7 +26,7 @@
 				<tr>
 					<td>Name</td>
 					<td>Address</td>
-					<td>Number of Jobs</td>
+					<td>Email</td>
 					<td></td>
 					<td></td>
 				</tr>
@@ -38,6 +38,7 @@
 			<tr>
 				<td>{{$company->name}}</td>
 				<td>{{$company->address}}</td>
+				<td>{{$company->email}}</td>
 				<td><a href="{{ route('company.edit',['id'=>$company->id]) }}" class="btn btn-primary">Edit</a></td>
 				<td>
 					<form id = "deleteform{{$company->id}}" action="{{route('company.destroy',$company->id)}}" method="post">

@@ -26,6 +26,7 @@
 					<td></td>
 					<td></td>
 					<td></td>
+					<td></td>
 				</tr>
 			</thead>
 			<tbody>
@@ -34,11 +35,18 @@
 					<td>{{$jobseeker->name}}</td>
 					<td>{{$jobseeker->address}}</td>
 					<td>{{$jobseeker->email}}</td>
+					
 					<td><a href="{{ route('download',['id'=>$jobseeker->id]) }}" class="btn btn-primary">Download</a></td>
-					@if(\Auth::user()->role=="company")
-					<td><a href="{{ route('updateStatus',['id'=>$jobseeker->id]) }}" class="btn btn-success">Hire</a></td>
-					@endif
 					<td><a href="{{ route('remove',['id'=>$jobseeker->id]) }}" class="btn btn-danger">Remove</a></td>
+
+					@if(\Auth::user()->role=="company")
+					@if($jobseeker->status=="unhired")
+					<td><a href="{{ route('updateStatus',['id'=>$jobseeker->id]) }}" class="btn btn-success">Hire</a></td>
+					@else
+					<td>{{$jobseeker->status}}</td>
+					@endif
+					@endif
+					
 				</tr>
 				@endforeach
 			</tbody>

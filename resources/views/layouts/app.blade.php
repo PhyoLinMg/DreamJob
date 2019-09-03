@@ -8,6 +8,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link href="{{ asset('css/all.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -68,6 +70,18 @@
         opacity: 10;
         transition: opacity 1s ease;
     }
+    .ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+    .ulli {
+  border: 1px solid #ddd; /* Add a thin border to each list item */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Add a grey background color */
+  padding: 12px; /* Add some padding */
+}
 </style>
 <script>
     window.Laravel = {!! json_encode([
@@ -93,12 +107,17 @@
                     <ul class="navbar-nav mr-auto">
                         <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link" href="{{ route('job.index') }}">Jobs</a>
-                        <a class="nav-item nav-link" href="{{ route('userindex') }}">Company</a>
+                        <a class="nav-item nav-link" href="{{ route('userindex') }}">Companies</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                        <form class="form-inline" action="{{ route('search') }}">
+                            @csrf
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search Job" name="job" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
                         @guest
                         <li class="nav-item">
                             <a class="btn btn-outline-success" href="{{ route('login') }}">{{ __('Login') }}</a>

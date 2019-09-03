@@ -9,12 +9,12 @@
 			<div class="card card-hover">
 				<div class="card-body">
 					<div style="float: left;">
-						<i class="fa fa-search fa-5x float-right"></i>
+						
 						<h3 class="card-title">{{$job->post}}</h3>
 						<p class="card-text">Ur job</p>
 					</div>
 					<div class="reveal" style="float:left;  margin-left: 100px">
-						<a href="{{ route('get',['id'=>$job->id]) }}" class="btn btn-success">Apply Job</a>
+						<a href="{{ route('get',['id'=>$job->id]) }}" class="btn btn-success">Details</a>
 					</div>
 				</div>
 			</div>
