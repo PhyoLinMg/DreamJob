@@ -26,7 +26,7 @@ Route::get('/admin','AdminController@admin');
 
 Route::get('/admin/register','AdminController@adminregister')->name('adminregister');
 Route::post('/admin/store','AdminController@adminstore')->name('adminstore');
-
+Route::get('/about_us','HomeController@aboutus')->name('about');
 Route::get('/chat', 'ChatsController@index')->name('chat');
 Route::get('/messages', 'ChatsController@fetchMessages');
 Route::post('/messages', 'ChatsController@sendMessage');

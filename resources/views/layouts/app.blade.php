@@ -9,6 +9,8 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/framework.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/about-us.css') }}">
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Scripts -->
@@ -108,6 +110,7 @@
                         <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link" href="{{ route('job.index') }}">Jobs</a>
                         <a class="nav-item nav-link" href="{{ route('userindex') }}">Companies</a>
+                        <a href="{{ route('about') }}" class="nav-item nav-link">About Us</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
