@@ -17,6 +17,7 @@ class CreateJobsTable extends Migration
             $table->bigIncrements('id');
             $table->string('post');
             $table->string('salary');
+            $table->string('category');
             $table->timestamps();
         });
     }

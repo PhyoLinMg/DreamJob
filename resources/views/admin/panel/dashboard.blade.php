@@ -39,7 +39,6 @@
 				@if (\Auth::user()->role=="company")
 				@foreach ($jobseekers as $jobseeker)
 				<tr>
-
 					<td>{{App\Job::find($jobseeker->job_id)['post']}}</td>
 					<td>{{$jobseeker->email}}</td>
 					<td><a href="{{ route('download',['id'=>$jobseeker->id]) }}" class="btn btn-primary">Download</a></td>

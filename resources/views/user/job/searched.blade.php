@@ -4,11 +4,11 @@
 
 <div class="container">
 	<div class="row">
-		@if (count($job)>0)
-			<a href="{{ route('get',['id'=>$job->id]) }}">{{$job[0]->post}}</a>
-		@else
-			<p>The job you searched is not here.</p>
-		@endif
+		@foreach ($jobs as $job)
+			<div class="col-md-12">
+				<a href="{{ route('get',['id'=>$job->id]) }}">{{$job->post}}</a>
+			</div>
+		@endforeach
 	</div>
 </div>
 

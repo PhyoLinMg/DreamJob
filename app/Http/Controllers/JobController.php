@@ -44,7 +44,8 @@ class JobController extends Controller
         Job::create([
             'post'=>$request->post,
             'salary'=>$request->salary,
-            'company_id'=>\Auth::user()->company_id
+            'company_id'=>\Auth::user()->company_id,
+            'category'=>$request->category
         ]);
         return redirect('/admin/job');
     }
@@ -119,8 +120,8 @@ class JobController extends Controller
     }
     public function search(Request $request){
         $jobname=$request->job;
-        $job = Job::where('post','LIKE','%'.$jobname.'%')->get();
-        return view('user.job.searched',compact('job'));
+        $jobs= Job::where('post','LIKE','%'.$jobname.'%')->get();
+        return view('user.job.searched',compact('jobs'));
 
     }
 }

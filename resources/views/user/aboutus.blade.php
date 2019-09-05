@@ -57,7 +57,7 @@
                   <ul>
                      <li><a href="https://www.facebook.com/myomin.wai.526"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+                    <li><a href="<span id=""></span>"><i class="fab fa-github-square"></i></a></li>
                   </ul>
                   <p class="team_description">Vestassapede et donec ut est liberos sus et eget sed eget. Quisqueta habitur augue magnisl magna phas ellus sagit titor ant curabi turpis.</p>
                 </figcaption>

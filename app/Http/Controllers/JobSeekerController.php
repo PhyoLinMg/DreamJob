@@ -83,10 +83,10 @@ class JobSeekerController extends Controller
      */
     public function destroy(JobSeeker $jobSeeker)
     {
-        //
+        
     }
     public function save(Request $request){
-
+        $this->count();
         $address=$request->address['addr_line1'].",".$request->address['city'].",".$request->address['state'];
         $name=$request->firstname." ".$request->lastname;
         $gender=$request->gender;
@@ -133,6 +133,12 @@ class JobSeekerController extends Controller
         $this->sendEmail($jobseeker->name,$jobseeker->email,$jobseeker->status);
         return redirect('/admin/jobseeker');
         
+    }
+    public function count(){
+        $user=\Auth::user();
+        $count=$user->count;
+        $user->count=$count+1;
+        $user->save();
     }
     public function sendEmail($name,$email,$status){
         $fullName = "DreamJob Agency";

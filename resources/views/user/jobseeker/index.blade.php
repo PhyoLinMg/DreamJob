@@ -1,7 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="alert alert-warning alert-block">
+  <button type="button" class="close" data-dismiss="alert">×</button> 
+        @if (\Auth::user()->count<=3)
+          <strong style="margin-left: 125px;">You seeked job for {{\Auth::user()->count}} times.</strong>
+        @else
+          <strong style="margin-left: 125px;">You have to pay 10000 Ks for using our website.</strong>
+        @endif
+</div>
 <div class="container">
   <div class="row">
     <div class="col-md-4" style="border: 1px solid #FFD98D">

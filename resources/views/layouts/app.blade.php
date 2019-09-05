@@ -116,7 +116,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        <form class="form-inline" action="{{ route('search') }}">
+                        <form class="form-inline" action="{{ route('search') }}" method="post">
                             @csrf
                             <input class="form-control mr-sm-2" type="search" placeholder="Search Job" name="job" aria-label="Search">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
