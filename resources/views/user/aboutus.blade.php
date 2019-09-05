@@ -19,11 +19,11 @@
               <figure><img src="{{ asset('image/demo/team-member.gif') }}" alt="">
                 <figcaption>
                   <div class="fl_left">
-                    <p class="team_name">Name Goes Here</p>
-                    <p class="team_title">Job Title Here</p>
+                    <p class="team_name">Htun Pa Pa Bo</p>
+                    <p class="team_title">Developer</p>
                   </div>
                   <ul>
-                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href="https://www.facebook.com/hppboo"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fab fa-github-square"></i></a></li>
                   </ul>
@@ -35,13 +35,13 @@
               <figure><img src="{{ asset('image/demo/team-member.gif') }}" alt="">
                 <figcaption>
                   <div class="fl_left">
-                    <p class="team_name">Name Goes Here</p>
-                    <p class="team_title">Job Title Here</p>
+                    <p class="team_name">Phyo Lin Mg</p>
+                    <p class="team_title">Developer</p>
                   </div>
                   <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+                    <li><a href="https://www.facebook.com/gangsterplm"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/PhyoLinMg"><i class="fab fa-github-square"></i></a></li>
                   </ul>
                   <p class="team_description">Vestassapede et donec ut est liberos sus et eget sed eget. Quisqueta habitur augue magnisl magna phas ellus sagit titor ant curabi turpis.</p>
                 </figcaption>
@@ -51,11 +51,11 @@
               <figure><img src="{{ asset('image/demo/team-member.gif') }}" alt="">
                 <figcaption>
                   <div class="fl_left">
-                    <p class="team_name">Name Goes Here</p>
-                    <p class="team_title">Job Title Here</p>
+                    <p class="team_name">Myo Min Wai</p>
+                    <p class="team_title">Developer</p>
                   </div>
                   <ul>
-                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href="https://www.facebook.com/myomin.wai.526"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fab fa-github-square"></i></a></li>
                   </ul>
