@@ -371,7 +371,7 @@
                 <!--end of one post -->
                 
 
-                <a class="text-uppercase loadmore-btn mx-auto d-block" href="category.html">Load More job Posts</a>
+                <a class="text-uppercase loadmore-btn mx-auto d-block" href="/job">Load More job Posts</a>
 
             </div>
             <div class="col-lg-4 sidebar">

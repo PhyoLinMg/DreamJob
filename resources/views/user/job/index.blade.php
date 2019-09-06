@@ -7,7 +7,7 @@
 		<div class="col-md-8 col-md-offset-2">
 			@foreach ($jobs as $job)
 			<div class="card card-hover">
-				<div class="card-body">
+				<div class="card-body" style="background-color: #B192FD">
 					<div style="float: left;">
 						
 						<h3 class="card-title">{{$job->post}}</h3>
