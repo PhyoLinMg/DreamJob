@@ -132,7 +132,7 @@
                 <div class="single-feature">
                     <h4>Searching</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
+                        Find Your Job in an easy way.
                     </p>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                 <div class="single-feature">
                     <h4>Applying</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
+                        Apply Your Job Easily.
                     </p>
                 </div>
             </div>
@@ -148,7 +148,7 @@
                 <div class="single-feature">
                     <h4>Security</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
+                        Your Personal Data will not be exposed.
                     </p>
                 </div>
             </div>
@@ -156,7 +156,7 @@
                 <div class="single-feature">
                     <h4>Notifications</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
+                       You will get the Notifications Real-Time.
                     </p>
                 </div>
             </div>                                                                      
@@ -179,7 +179,7 @@
                         <a href="#"><h4>Creative Designer</h4></a>
                         <h6>Yangon</h6>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis.
+                            We will guarantee that your job experience will become the best.We will try to be our best to give better experience to our employees.
                         </p>
                     </div>
                 </div>  
@@ -192,7 +192,7 @@
                         <a href="#"><h4>Creative Designer</h4></a>
                         <h6>Yangon</h6>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis.
+                            We will guarantee that your job experience will become the best.We will try to be our best to give better experience to our employees..
                         </p>
                     </div>
                 </div>
@@ -205,7 +205,7 @@
                         <a href="#"><h4>Creative Designer</h4></a>
                         <h6>Yangon</h6>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis.
+                            We will guarantee that your job experience will become the best.We will try to be our best to give better experience to our employees..
                         </p>
                     </div>
                 </div>  
@@ -218,7 +218,7 @@
                         <a href="#"><h4>Creative Designer</h4></a>
                         <h6>Yangon</h6>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis.
+                            We will guarantee that your job experience will become the best.We will try to be our best to give better experience to our employees..
                         </p>
                     </div>
                 </div>  
@@ -231,7 +231,7 @@
                         <a href="#"><h4>Creative Designer</h4></a>
                         <h6>Yangon</h6>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis.
+                            We will guarantee that your job experience will become the best.We will try to be our best to give better experience to our employees..
                         </p>
                     </div>
                 </div>  
@@ -244,7 +244,7 @@
                         <a href="#"><h4>Creative Designer</h4></a>
                         <h6>Yangon</h6>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis.
+                            We will guarantee that your job experience will become the best.We will try to be our best to give better experience to our employees..
                         </p>
                     </div>
                 </div>                                                                                                                                                          
@@ -268,7 +268,7 @@
         <div class="row">
             <div class="col-lg-2 col-md-4 col-sm-6">
                 <div class="single-fcat">
-                    <a href="category.html">
+                    <a href="">
                         <img src="{{ asset('image/o1.png') }}" alt="">
                     </a>
                     <p>Accounting</p>
@@ -276,7 +276,7 @@
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6">
                 <div class="single-fcat">
-                    <a href="category.html">
+                    <a href="l">
                         <img src="{{ asset('image/o2.png') }}" alt="">
                     </a>
                     <p>Development</p>
@@ -284,7 +284,7 @@
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6">
                 <div class="single-fcat">
-                    <a href="category.html">
+                    <a href="">
                         <img src="{{ asset('image/o3.png') }}" alt="">
                     </a>
                     <p>Technology</p>
@@ -292,7 +292,7 @@
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6">
                 <div class="single-fcat">
-                    <a href="category.html">
+                    <a href="">
                         <img src="{{ asset('image/o4.png') }}" alt="">
                     </a>
                     <p>Media & News</p>
@@ -300,7 +300,7 @@
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6">
                 <div class="single-fcat">
-                    <a href="category.html">
+                    <a href="">
                         <img src="{{ asset('image/o5.png') }}" alt="">
                     </a>
                     <p>Medical</p>
@@ -308,7 +308,7 @@
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6">
                 <div class="single-fcat">
-                    <a href="category.html">
+                    <a href="">
                         <img src="{{ asset('image/o6.png') }}" alt="">
                     </a>
                     <p>Goverment</p>
@@ -360,10 +360,11 @@
                             </ul>
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut dolore magna aliqua.
+                           Job Requirements:Need at least 1 yr experience,
+                                            Must pass the matriculation exam.
                         </p>
                         <h5>Job Nature: Full time</h5>
-                        <p class="address"><span class="fas fa-fw fa-map"></span> 56/8, Panthapath Dhanmondi Dhaka</p>
+                        <p class="address"><span class="fas fa-fw fa-map"></span> 56/8, Yangon,Latha Township</p>
                         <p class="address"><span class="fas fa-fw fa-heart"></span> {{$job->salary}}</p>
                     </div>
                 </div> 
@@ -380,11 +381,12 @@
                     <div class="active-relatedjob-carusel">
                         @for ($i = 0; $i <=2 ; $i++)
                         <div class="single-rated">
-                            <img class="img-fluid" src="{{ asset('image/r1.png') }}" alt="">
+                            <img class="img-fluid" src="{{ asset('image/r1.jpg') }}" alt="">
                             <a href=""><h4>{{$jobs[$i]->post}}</h4></a>
                             <h6>Premium Labels Limited</h6>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut dolore magna aliqua.
+                                Job Requirements:Need at least 1 yr experience,
+                                            Must pass the matriculation exam.
                             </p>
                             <h5>Job Nature: Full time</h5>
                             <p class="address"><span class="fas fa-fw fa-map"></span> 56/8, Panthapath Dhanmondi Dhaka</p>
