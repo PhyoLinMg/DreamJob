@@ -17,9 +17,9 @@
 				<a href="/admin">Dashboard</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="/job">Job</a>
+				<a href="/company">Company</a>
 			</li>
-			<li class="breadcrumb-item active">Create</li>
+			<li class="breadcrumb-item active">Edit</li>
 		</ol>
 
 		<!-- Page Content -->
