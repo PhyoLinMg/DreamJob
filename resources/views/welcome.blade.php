@@ -113,11 +113,10 @@
     <div class="container">
         <div class="row fullscreen d-flex align-items-center justify-content-center">
             <div class="banner-content col-lg-12">
-                <h1 class="text-white">
-                    <span>1500+</span> Jobs posted last week                
+                <h1 class="text-white" style="font-size: 100px">
+                    <span>DreamJob</span> At Your Service                
                 </h1>   
                 <!-- add jobs -->
-                <p class="text-white"> <span>Search by tags:</span> Tecnology, Business, Consulting, IT Company, Design, Development</p>
             </div>                                          
         </div>
     </div>

@@ -11,9 +11,12 @@
 					<h5 class="card-title">{{$company->name}}</h5>
 					<h6 class="card-subtitle mb-2 text-muted">{{$company->address}}</h6>
 					<p class="card-text">{{$company->description}}</p>
-					@foreach($company->jobs as $job)
-					<a href="{{ route('get',['id'=>$job->id]) }}" class="card-link">{{$job->post}}</a>
-					@endforeach
+					@for ($i = 0; $i <2 ; $i++)
+						<a href="{{ route('get',['id'=>$company->jobs[$i]->id]) }}" class="card-link">{{$company->jobs[$i]->post}}</a>
+					@endfor
+					<br>
+					<a href="/job" class="text-center">More....</a>
+					
 				</div>
 			</div>
 		</div>
