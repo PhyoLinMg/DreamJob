@@ -117,6 +117,7 @@
                     <span>DreamJob</span> At Your Service                
                 </h1>   
                 <!-- add jobs -->
+                <p class="text-white" style="font-size: 50px">Launch Your Recruitment Careers</p>
             </div>                                          
         </div>
     </div>
