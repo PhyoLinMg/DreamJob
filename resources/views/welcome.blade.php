@@ -112,12 +112,12 @@
     <div class="overlay overlay-bg"></div>
     <div class="container">
         <div class="row fullscreen d-flex align-items-center justify-content-center">
-            <div class="banner-content col-lg-12">
-                <h1 class="text-white" style="font-size: 100px">
+            <div class="banner-content col-lg-12 col-md-12">
+                <h1 class="text-white" style="font-size: 6vw;">
                     <span>DreamJob</span> At Your Service                
                 </h1>   
                 <!-- add jobs -->
-                <p class="text-white" style="font-size: 50px">Launch Your Recruitment Careers</p>
+                <p class="text-white" style="font-size: 3vw;">Launch Your Recruitment Careers</p>
             </div>                                          
         </div>
     </div>
