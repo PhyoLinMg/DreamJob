@@ -12,9 +12,9 @@
 					<h6 class="card-subtitle mb-2 text-muted">{{$company->address}}</h6>
 					<p>{{$company->jobs}}</p>
 					<p class="card-text">{{$company->description}}</p>
-					@for ($i = 0; $i <2 ; $i++)
+					{{-- @for ($i = 0; $i <2 ; $i++)
 						<a href="{{ route('get',['id'=>$company->jobs[$i]->id]) }}" class="card-link">{{$company->jobs[$i]->post}}</a>
-					@endfor
+					@endfor --}}
 					<br>
 					<a href="/job" class="text-center">More....</a>
 					
