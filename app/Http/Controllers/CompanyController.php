@@ -81,7 +81,7 @@ class CompanyController extends Controller
         $company->name=$request->name;
         $company->address=$request->address;
         $company->description=$request->description;
-        $company->number_of_jobs=$request->no_of_jobs;
+        $company->email=$request->email;
         $company->save();
         return redirect('/admin/company');
     }

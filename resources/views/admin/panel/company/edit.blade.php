@@ -46,9 +46,9 @@
 			</div>
 
 			<div class="form-group">
-				<label for="" class="white">Number of jobs</label>
-				<input class="form-control" value="{{$jj->number_of_jobs}}" name="no_of_jobs" id="" type="text" required/>
-				<small id="" class="form-text text-muted">Please enter the total number of jobs</small>
+				<label for="" class="white">Email</label>
+				<input class="form-control" value="{{$jj->email}}" name="email" id="" type="text" required/>
+				<small id="" class="form-text text-muted">Please enter the company's email.</small>
 			</div>
 
 			<div class="form-group">
