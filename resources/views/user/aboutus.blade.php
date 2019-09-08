@@ -11,9 +11,8 @@
         <section id="team">
           <ul class="clear">
             <li class="one_quarter first">
-              <h1>Vivamuslibero Auguer</h1>
+              <h1>DreamJob</h1>
               <p>In sed neque id libero pretium luctus. Vivamus faucibus. Ut vitae elit. In hac habitasse platea dictumst. Proin et nisl ac orci tempus luctus.</p>
-              <div class="imgholder"><img src="images/demo/205x190.gif" alt=""></div>
             </li>
             <li class="one_quarter">
               <figure><img src="{{ asset('image/demo/team-member.gif') }}" alt="">
@@ -27,7 +26,7 @@
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fab fa-github-square"></i></a></li>
                   </ul>
-                  <p class="team_description">Vestassapede et donec ut est liberos sus et eget sed eget. Quisqueta habitur augue magnisl magna phas ellus sagit titor ant curabi turpis.</p>
+                  <p class="team_description">The Passionate and Young Team who wants to change the lifestyle and future of Myanmar People</p>
                 </figcaption>
               </figure>
             </li>
@@ -43,7 +42,7 @@
                     <li><a href=""><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://github.com/PhyoLinMg"><i class="fab fa-github-square"></i></a></li>
                   </ul>
-                  <p class="team_description">Vestassapede et donec ut est liberos sus et eget sed eget. Quisqueta habitur augue magnisl magna phas ellus sagit titor ant curabi turpis.</p>
+                  <p class="team_description">The Passionate and Young Team who wants to change the lifestyle and future of Myanmar People</p>
                 </figcaption>
               </figure>
             </li>
@@ -57,9 +56,9 @@
                   <ul>
                      <li><a href="https://www.facebook.com/myomin.wai.526"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="<span id=""></span>"><i class="fab fa-github-square"></i></a></li>
+                    <li><a href=""><i class="fab fa-github-square"></i></a></li>
                   </ul>
-                  <p class="team_description">Vestassapede et donec ut est liberos sus et eget sed eget. Quisqueta habitur augue magnisl magna phas ellus sagit titor ant curabi turpis.</p>
+                  <p class="team_description">The Passionate and Young Team who wants to change the lifestyle and future of Myanmar People</p>
                 </figcaption>
               </figure>
             </li>

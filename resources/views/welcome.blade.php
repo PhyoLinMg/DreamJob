@@ -325,10 +325,10 @@
         <div class="row justify-content-center d-flex">
             <div class="col-lg-8 post-list">
                 <ul class="cat-list">
-                    <li><a href="#">Recent</a></li>
-                    <li><a href="#">Full Time</a></li>
-                    <li><a href="#">Intern</a></li>
-                    <li><a href="#">part Time</a></li>
+                    <li><a href="/job">Recent</a></li>
+                    <li><a href="/job">Full Time</a></li>
+                    <li><a href="/job">Intern</a></li>
+                    <li><a href="/job">part Time</a></li>
                 </ul>
                 
                 <!--This is one post -->
@@ -352,7 +352,7 @@
                         <div class="title d-flex flex-row justify-content-between">
                             <div class="titles">
                                 <a href=""><h4>{{$job->post}}</h4></a>
-                                <h6>Premium Labels Limited</h6>                 
+                                <h6>{{App\Company::find($job->company_id)->name}}</h6>                 
                             </div>
                             <ul class="btns">
                                 <li><a href="#"><span class="fas fa-fw fa-heart"></span></a></li>
