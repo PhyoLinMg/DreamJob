@@ -383,7 +383,7 @@
                         <div class="single-rated">
                             <img class="img-fluid" src="{{ asset('image/r1.jpg') }}" alt="">
                             <a href=""><h4>{{$jobs[$i]->post}}</h4></a>
-                            <h6>Premium Labels Limited</h6>
+                            <h6>{{App\Company::find($jobs[$i]->company_id)->name}}</h6>
                             <p>
                                 Job Requirements:Need at least 1 yr experience,
                                             Must pass the matriculation exam.
