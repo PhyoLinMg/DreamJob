@@ -65,11 +65,7 @@
            </ul>
          </section>
          
-         <section id="statements" class="clear">
-          <img src="images/demo/960x340.gif" alt="">
-          <h2>Vivamuslibero Auguer</h2>
-          <p>In sed neque id libero pretium luctus. Vivamus faucibus. Ut vitae elit. In hac habitasse platea dictumst. Proin et nisl ac orci tempus luctus. Aenean lacinia justo at nisi. Vestibulum sed eros sit amet nisl lobortis commodo. Suspendisse nulla. Vivamus ac lorem. Aliquam pulvinar purus at felis. Quisque convallis nulla id ipsum. Praesent vitae urna. Fusce blandit nunc nec mi. Praesent vestibulum hendrerit ante.</p>
-        </section>
+         
       </div>
 
     </div>
