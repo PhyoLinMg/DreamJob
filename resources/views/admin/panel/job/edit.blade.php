@@ -34,7 +34,7 @@
 			</div>
 			<div class="form-group">
 				<label for="" class="white">Salary</label>
-				<input class="form-control" name="address" value="{{$jj->salary}}" id="" type="text" required/>
+				<input class="form-control" name="salary" value="{{$jj->salary}}" id="" type="text" required/>
 				<small id="" class="form-text text-muted">Please enter the salary</small>
 			</div>
 			
