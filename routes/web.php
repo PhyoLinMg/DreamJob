@@ -14,7 +14,8 @@ use App\Job;
 */
 
 Route::get('/', function () {
-	$jobs=Job::all()->take(7);
+	$jobs=Job::all();
+	// dd($jobs[0]->salary);
     return view('welcome',compact('jobs'));
 });
 

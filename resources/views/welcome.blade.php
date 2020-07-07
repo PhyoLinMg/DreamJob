@@ -379,7 +379,7 @@
                 <div class="single-slidebar">
                     <h4>Top rated job posts</h4>
                     <div class="active-relatedjob-carusel">
-                        @for ($i = 0; $i <=2 ; $i++)
+                        @for ($i = 0; $i <$jobs->count() ; $i++)
                         <div class="single-rated">
                             <img class="img-fluid" src="{{ asset('image/r1.jpg') }}" alt="">
                             <a href=""><h4>{{$jobs[$i]->post}}</h4></a>
